@@ -45,7 +45,7 @@ Navigate to `http://localhost:3000/` to check your app
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page]https://github.com/emmyobonyo/rails-search-analytics/issues).
+Feel free to check the [issues page](https://github.com/emmyobonyo/rails-search-analytics/issues).
 
 ## Show your support
 
