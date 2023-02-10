@@ -5,15 +5,14 @@ databases:
 
 services:
   - type: web
-    name: mysite
+    name: helpjuice
     env: ruby
     buildCommand: "./bin/render-build.sh"
     startCommand: "bundle exec puma -C config/puma.rb"
     envVars:
       - key: DATABASE_URL
         fromDatabase:
-          name: mysite
+          name: helpjoice
           property: connectionString
       - key: RAILS_MASTER_KEY
         sync: false
-        
