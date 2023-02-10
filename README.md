@@ -14,8 +14,8 @@ Live link: https://mysite-wum8.onrender.com/ (Deployed on Render)
 
 ## Tasks that can be performed
 - A User can sign up for an account.
-- A User can log in into that account.
-- A User can add an article to the database (That article will be attributed that user).
+- A User can log-in into that account.
+- A User can add an article to the database (That article will be attributed to that user).
 - A User can search the database for specific articles.
 - Analytics of most searched terms are returned.
 
