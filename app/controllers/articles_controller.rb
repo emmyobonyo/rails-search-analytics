@@ -4,7 +4,10 @@ class ArticlesController < ApplicationController
     def index
       # @articles = Article.all
       if params[:query].present?
+        # debugger
         @articles = Article.where("title LIKE ?", "%#{params[:query]}%")
+        current_user.most_searched_themes.push(params[:query])
+        current_user.save
       else
         @articles = Article.all
       end

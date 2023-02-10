@@ -7,6 +7,6 @@ export default class extends Controller {
     this.timeout = setTimeout(() => {
       this.element.requestSubmit(); 
       console.log('key pressed')
-    }, 200)
+    }, 1000)
   }
 }

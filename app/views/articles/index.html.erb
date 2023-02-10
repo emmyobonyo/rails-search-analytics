@@ -11,6 +11,9 @@
   <%= form.submit "Search"%>
 <% end %>
 
+<% current_user.most_searched_themes.each do |search_item| %>
+  <span><%= search_item%></span>
+<% end %>
 
 
 <%= link_to "New article", new_article_path %>
