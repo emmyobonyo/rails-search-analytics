@@ -5,25 +5,25 @@
 <%= form_with(url: articles_path, method: :get, data: { controller: "search-form",
   turbo_frame: "articles", turbo_action: "advance"
 }) do |form| %>
-  <%= form.label :query, 'Search by article name' %>
-  <%= form.text_field :query, data: { action: "input->search-form#search"}%>
+  <%= form.label :query, 'Search by article name', class: 'search-label' %><br />
+  <%= form.text_field :query, data: { action: "input->search-form#search"}, class: 'search-input'%><br />
 
-  <%= form.submit "Search"%>
+  <%= form.submit "Search", class: 'search-button'%>
+  <%= link_to "New article", new_article_path, class: 'search-button' %>
 <% end %>
 
+<p><b>These are the most common search queries</b></p>
 <% current_user.most_searched_themes.each do |search_item| %>
-  <span><%= search_item%></span>
+  <span class="commons"><b><%= search_item%></b>,</span>
 <% end %>
-
-
-<%= link_to "New article", new_article_path %>
+<br />
 
 <%= turbo_frame_tag "articles" do%>
   <div id="articles">
     <% @articles.each do |article| %>
       <%= render article %>
       <p>
-        <%= link_to "Show this article", article %>
+        <%= link_to "Show this article", article, class: 'search-button' %>
       </p>
     <% end %>
   </div>

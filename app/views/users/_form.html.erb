@@ -12,19 +12,19 @@
   <% end %>
 
   <div>
-    <%= form.label :username, style: "display: block" %>
-    <%= form.text_field :username%>
+    <%= form.label :username, class: "login-headings" %><br />
+    <%= form.text_field :username, class: "login-input"%>
   </div>
 
   <div>
-    <%= form.label :email, style: "display: block" %>
-    <%= form.email_field :email %>
+    <%= form.label :email, class: "login-headings" %><br />
+    <%= form.email_field :email, class: "login-input" %>
   </div>
 
 
   <div>
-    <%= form.label :password, style: "display: block" %>
-    <%= form.password_field :password %>
+    <%= form.label :password, class: "login-headings" %><br />
+    <%= form.password_field :password, class: "login-input" %>
   </div>
 
   <div>
